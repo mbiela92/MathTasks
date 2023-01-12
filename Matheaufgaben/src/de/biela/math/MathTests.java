@@ -58,7 +58,7 @@ class MathTests
     @ParameterizedTest(name = "run {index}: TestQueryMaxValue Input {0} Output {1}")
     @CsvSource(delimiter = '|', textBlock = """
         -1      |       999
-        0       |       99
+        0       |       999
         1       |       1                 
         99      |       99
         100     |       100
