@@ -60,7 +60,7 @@ class MathTests
         -1      |       999
         0       |       999
         1       |       1                 
-        99      |       999
+        99      |       99
         100     |       100
         101     |       999
         k10     |       999
@@ -168,7 +168,7 @@ class MathTests
     }
     
     
-    /*
+    
     @ParameterizedTest(name = "run {index}: TestCreateTasks Input {0}")
     @CsvSource({"5","50","100"})
     
@@ -184,7 +184,7 @@ class MathTests
         
         
     }
-    */
+    
 
     
 }
