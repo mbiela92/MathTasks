@@ -26,6 +26,9 @@ public class Math
      * 
      */
     private static String []arrayOperator;
+
+
+
     private int firstOperand;
     private int secondOperand;
     private static int MAX_VALUE=20;
@@ -40,6 +43,11 @@ public class Math
         firstOperand = random.nextInt(MAX_VALUE)+1;                       //Zahl zwischen 1-20
         operator = arrayOperator[random.nextInt(arrayOperator.length)];
         secondOperand = determineSecondOperand(MAX_VALUE);
+    }
+    
+    protected static final void setArrayOperator(String[] arrayOperator)
+    {
+        Math.arrayOperator = arrayOperator;
     }
     
     protected int determineSecondOperand(int value)
@@ -138,7 +146,7 @@ public class Math
     
     protected static List<Math> createTasks(int amount) 
     {
-        List<Math> tasks = new ArrayList<Math>();
+        List<Math> tasks = new ArrayList<>();
         for(int i = 0; i<amount;i++) 
         {
             tasks.add(new Math());

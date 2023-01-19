@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.List;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
@@ -167,20 +168,22 @@ class MathTests
                          Arguments.of(value4,expected4)); 
     }
     
-    
+   
     
     @ParameterizedTest(name = "run {index}: TestCreateTasks Input {0}")
     @CsvSource({"5","50","100"})
-    
+
     void TestCreateTasks(int first)
     {
         // GIVEN
-        int length = first;
+        String[] arrayOperator = {"+"};
+        Math.setArrayOperator(arrayOperator);
+        
         // WHEN
-        int expected = Math.createTasks(first).size();
+        List<Math> tasks = Math.createTasks(first);
         // THEN
         
-        assertTrue(length==expected);
+        assertEquals(first,tasks.size());
         
         
     }
