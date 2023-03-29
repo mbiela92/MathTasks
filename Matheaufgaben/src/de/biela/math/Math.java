@@ -35,7 +35,7 @@ public class Math
     private int result=0;
     private static int amountTasks=50;
     private String operator;
-    private static String path="C:/Users/marce/OneDrive/Desktop/result.pdf";
+    private final static String path=System.getProperty("user.dir") + "/result.pdf";
     private Random random = new Random ( ) ;
     
     protected Math() 
@@ -216,6 +216,7 @@ public class Math
 
     public static void main(String[] args)
     {
+        System.out.println(System.getProperty("user.dir"));
         amountTasks = queryAmount();
         MAX_VALUE = queryMaxValue();
         arrayOperator = Math.FormatArithmeticOperations(queryArithmeticOperand());
