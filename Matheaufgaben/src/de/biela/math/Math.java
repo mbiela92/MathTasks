@@ -35,7 +35,7 @@ public class Math
     private int result=0;
     private static int amountTasks=50;
     private String operator;
-    private final static String path=System.getProperty("user.dir") + "/result.pdf";
+    private final static String PATH=System.getProperty("user.dir") + "/result.pdf";
     private Random random = new Random ( ) ;
     
     protected Math() 
@@ -221,7 +221,7 @@ public class Math
         MAX_VALUE = queryMaxValue();
         arrayOperator = Math.FormatArithmeticOperations(queryArithmeticOperand());
         String text = Math.formatTasks(createTasks(amountTasks));
-        Math.createDocument(text, path);
+        Math.createDocument(text, PATH);
 
     }
 
